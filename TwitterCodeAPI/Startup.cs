@@ -34,7 +34,12 @@ namespace TwitterCodeAPI
                 app.UseDeveloperExceptionPage();
             }
 
-            app.UseMvc();
+            app.UseMvc(routes => 
+            {
+                routes.MapRoute(
+                    name: "default",
+                    template: "{controller=Tweets}/{action=Get}");
+            });
         }
     }
 }
