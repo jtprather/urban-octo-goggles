@@ -18,7 +18,7 @@
     },
     "TwitterCodeAPI": {
       "commandName": "Project",
-      "launchBrowser": true,
+      "launchBrowser": false,
       "launchUrl": "api/tweets",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
