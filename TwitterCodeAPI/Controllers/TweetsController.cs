@@ -78,7 +78,7 @@ namespace TwitterCodeAPI.Controllers
                 var tweetModel = new TimelineTweet(
                     timelineTweet.CreatedBy.Name, 
                     timelineTweet.CreatedBy.ScreenName, 
-                    timelineTweet.CreatedBy.ProfileBackgroundImageUrl, 
+                    timelineTweet.CreatedBy.ProfileImageUrl, 
                     timelineTweet.FullText, 
                     timelineTweet.RetweetCount, 
                     timelineTweet.CreatedAt,
