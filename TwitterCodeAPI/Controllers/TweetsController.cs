@@ -8,6 +8,7 @@ using System.Text;
 using System.Web;
 using Tweetinvi;
 using Tweetinvi.Models;
+using Tweetinvi.Parameters;
 using TwitterCodeAPI.Models;
 using static System.Net.Mime.MediaTypeNames;
 
@@ -69,8 +70,9 @@ namespace TwitterCodeAPI.Controllers
         {
             var appCreds = Auth.SetApplicationOnlyCredentials(CONSUMER_KEY, CONSUMER_SECRET, bearerToken);
 
-            List<TimelineTweet> tweets = new List<TimelineTweet>();
+            TweetinviConfig.CurrentThreadSettings.TweetMode = TweetMode.Extended;
 
+            List<TimelineTweet> tweets = new List<TimelineTweet>();
             var userTimeline = Timeline.GetUserTimeline("salesforce",10);
 
             foreach (var timelineTweet in userTimeline)
